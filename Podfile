@@ -5,7 +5,7 @@ use_frameworks!
 
 target 'LingvoMax' do
 
-pod 'Parse', '1.9.0'
+pod 'Parse', '1.14.2'
 pod 'SVProgressHUD'
 pod 'Charts', '2.3.0'
 

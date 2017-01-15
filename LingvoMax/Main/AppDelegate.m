@@ -17,8 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    [Parse setApplicationId:@"ngo1V758D0KdKnrr2TsoLgFsECQcpLZfXLV8b6WT" clientKey:@"vHjToHifUDv8Lm9zalfX2kgbeONL2qp9kxZK1WY4"];
+
+    ParseClientConfiguration *config = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration>  _Nonnull configuration) {
+        configuration.applicationId = @"ngo1V758D0KdKnrr2TsoLgFsECQcpLZfXLV8b6WT";
+        configuration.clientKey = @"vHjToHifUDv8Lm9zalfX2kgbeONL2qp9kxZK1WY4";
+        configuration.server = @"https://aqueous-atoll-18925.herokuapp.com/parse";
+    }];
+    [Parse initializeWithConfiguration:config];
     
     return YES;
 }
