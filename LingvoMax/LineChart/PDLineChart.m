@@ -150,7 +150,7 @@
                 [self.layer addSublayer:shapeLayer];
                 
                 CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    //            pathAnimation.beginTime = CACurrentMediaTime() + 0.5f;
+//              pathAnimation.beginTime = CACurrentMediaTime() + 0.5f;
                 pathAnimation.duration = 0.5f;
                 pathAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
                 pathAnimation.toValue = [NSNumber numberWithFloat:1.0f];
